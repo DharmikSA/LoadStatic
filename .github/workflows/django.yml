@@ -29,7 +29,7 @@ jobs:
           cd LoadStatic
           git pull
         else
-          git clone 'https://gitlab.com/dharmiksa/loadstatic.git'
+          git clone 'https://github.com/DharmikSA/LoadStatic.git'
           cd LoadStatic
         fi
         nohup python3 manage.py runserver 0:8000 &
