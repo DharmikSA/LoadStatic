@@ -11,10 +11,10 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-    # - name: Install Dependencies
-    #   run: |
-    #     python3 -m pip install --upgrade pip
-    #     pip install -r requirements.txt
-    - name: Run Tests
+    - name: Run Project
       run: |
-        python3 manage.py test
+        python3 manage.py runserver 0:3000
+
+    # - name: Run Tests
+    #   run: |
+    #     python3 manage.py test
