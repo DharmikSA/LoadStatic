@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  call-workflow-passing-data:
+  try:
     uses: ./Templates/.github/workflows/cicd.yml
     # with:
     #   username: mona

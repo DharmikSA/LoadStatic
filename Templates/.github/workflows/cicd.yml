@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  try:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
