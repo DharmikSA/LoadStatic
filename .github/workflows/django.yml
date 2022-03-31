@@ -15,7 +15,7 @@ jobs:
     runs-on: self-hosted
     steps:
       # - uses: actions/checkout@v3
-      - uses: LoadStatic/checkout@master
+      - uses: git@github.com:DharmikSA/LoadStatic/Templates/.github/workflows/cicd.yml@master
 
   build:
     runs-on: self-hosted
