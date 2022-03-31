@@ -35,6 +35,6 @@ jobs:
         nohup python3 manage.py runserver 0:8000 &
         EOF
         
-    # - name: Run Testssssssss
+    # - nam=fgjgjkuge: Run Testssssssss
     #   run: |
     #     python3 manage.py test
