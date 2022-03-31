@@ -10,7 +10,7 @@ on:
 jobs:
 
   call-workflow-passing-data:
-    uses: Templates/.github/workflows/cicd.yml@master
+    uses: ./Templates/.github/workflows/cicd.yml@master
     # with:
     #   username: mona
     # secrets:
