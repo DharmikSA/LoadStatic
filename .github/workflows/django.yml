@@ -6,12 +6,20 @@ on:
   pull_request:
     branches: [ master ]
 
+
 jobs:
+
+  call-workflow-passing-data:
+    uses: Templates/.github/workflows/cicd.yml@master
+    # with:
+    #   username: mona
+    # secrets:
+    #   envPAT: ${{ secrets.envPAT }}
+
   build:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-    - uses: ./Templates/.github/workflows/test.yml
     - name: Run Project
       run: |
         nohup python3 manage.py runserver 0:3000 &
