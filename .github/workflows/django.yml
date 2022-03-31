@@ -2,7 +2,9 @@ name: Django CI
 
 on:
   workflow_run:
-    workflows: ["try"]
+    workflows:
+      - "./Templates/.github/workflows/cicd.yml"
+
   push:
     branches: [ master ]
   pull_request:
