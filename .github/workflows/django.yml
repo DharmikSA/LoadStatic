@@ -11,11 +11,8 @@ on:
 
 jobs:
 
-  reusable_workflow_job:
-    runs-on: self-hosted
-    steps:
-      # - uses: actions/checkout@v3
-      - uses: git@github.com:DharmikSA/LoadStatic/Templates/.github/workflows/cicd.yml@master
+  call-workflow-2-in-local-repo:
+    uses: ./.github/workflows/cicd.yml
 
   build:
     runs-on: self-hosted
