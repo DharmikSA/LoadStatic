@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Deploy Project
       run: |
-        ssh ubuntu@3.111.157.110 <<-EOF
+        ssh -t ubuntu@3.111.157.110 <<-EOF
         if [ -d 'LoadStatic']
         then
           cd LoadStatic
