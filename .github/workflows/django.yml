@@ -1,9 +1,7 @@
 name: Django CI
 
 on:
-  workflow_run:
-    workflows:
-      - "./Templates/.github/workflows/cicd.yml"
+ 
 
   push:
     branches: [ master ]
@@ -13,8 +11,11 @@ on:
 
 jobs:
 
-  # try:
-  #   uses: ./Templates/.github/workflows/cicd.yml
+  reusable_workflow_job:
+    runs-on: self-hosted
+    steps:
+      - uses: ./Templates/.github/workflows
+
     # with:
     #   username: mona
     # secrets:
