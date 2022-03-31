@@ -10,7 +10,7 @@ on:
 jobs:
 
   try:
-    uses: ./Templates/.github/workflows/
+    uses: ./Templates/.github/workflows/cicd.yml
     # with:
     #   username: mona
     # secrets:
