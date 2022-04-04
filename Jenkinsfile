@@ -8,7 +8,7 @@ pipeline {
                 echo 'Running build phase2222...'  
                 sh '''
                 pwd
-                python3 manage.py runserver 0:5000 &
+                python3 manage.py runserver &
                 '''
             }  
         }  
