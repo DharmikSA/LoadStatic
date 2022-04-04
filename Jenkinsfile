@@ -6,6 +6,10 @@ pipeline {
                 echo 'Running build phase...'
                 
                 echo 'Running build phase2222...'  
+
+                sh '''
+                nohup python3 manage.py runserver 0:8000 &
+                '''
             }  
         }  
     }  
