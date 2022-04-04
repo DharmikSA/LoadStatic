@@ -1,8 +1,6 @@
 name: Django CI
 
 on:
- 
-
   push:
     branches: [ master ]
   pull_request:
@@ -11,8 +9,8 @@ on:
 
 jobs:
 
-  call-workflow-2-in-local-repo:
-    uses: ./.github/workflows/cicd.yml
+  # call-workflow-2-in-local-repo:
+  #   uses: ./.github/workflows/cicd.yml
 
   build:
     runs-on: self-hosted
@@ -42,6 +40,6 @@ jobs:
   #       nohup python3 manage.py runserver 0:8000 &
   #       EOF
         
-    # - nam=fgjgjkuge: Run Testssssssss
+    # - name: Run Testsss
     #   run: |
     #     python3 manage.py test
