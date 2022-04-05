@@ -4,14 +4,10 @@ pipeline {
         stage ('Build') {  
                 steps {  
                     echo 'Running build phase...'
-
-                    echo 'Running build phase2222...'  
-
-
+//                     echo 'Running build phase2222...'  
                     sh '''
                     pwd
                     python3 manage.py runserver &
-                    
                     ssh -t ubuntu@3.110.32.130 <<-EOF
                         pkill -f runserver
                         if [ -d 'LoadStatic']
@@ -24,7 +20,7 @@ pipeline {
                         fi
                         pwd
                         nohup python3 manage.py runserver 0:8000 &   
-    EOF
+                    EOF
                     '''
                        mail bcc: '', body: 'Yes WOrk', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
 
