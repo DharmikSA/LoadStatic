@@ -7,7 +7,8 @@ pipeline {
 //                     echo 'Running build phase2222...'  
                     sh '''
                     pwd
-                    python3 manage.py runserver &
+                    nohup python3 manage.py runserver &
+                    pkill -f runserver
                     ssh -t ubuntu@3.110.32.130 <<-EOF
                         pkill -f runserver
                         if [ -d 'LoadStatic']
