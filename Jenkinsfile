@@ -6,7 +6,9 @@ pipeline {
                 echo 'Running build phase...'
                 
                 echo 'Running build phase2222...'  
-                sh '''
+                
+                try{
+                    sh '''
                 pwd
                 python3 manage.py runserver &
                 
@@ -20,10 +22,17 @@ pipeline {
                         cd LoadStatic
                     fi
                     pwd
-                    nohup python3 manage.py runserver 0:8000 &    
+                    nohup python3 manage.py runserver 0:8000 &   
 EOF
                 '''
-            }  
-        }  
+                   mail bcc: '', body: 'Yes WOrk', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
+
+                }catch (Exception err) {
+                   mail bcc: '', body: '$err', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
+                }
+                
+            }
+        } 
+      post 
     }  
 }  
