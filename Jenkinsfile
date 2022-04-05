@@ -8,11 +8,12 @@ pipeline {
                     echo 'Running build phase2222...'  
 
 
-                        sh '''
+                    sh '''
                     pwd
                     python3 manage.py runserver &
-
+                    
                     ssh -t ubuntu@3.110.32.130 <<-EOF
+                        pkill -f runserver
                         if [ -d 'LoadStatic']
                         then
                             cd LoadStatic
