@@ -19,8 +19,8 @@ pipeline {
                      git clone 'https://github.com/DharmikSA/LoadStatic.git'
                      cd LoadStatic
                    fi
-                   nohup python3 manage.py runserver 0:8000 &
-                    EOF
+                   nohup python3 manage.py runserver 0:8000 &    
+                EOF
 
                 '''
             }  
