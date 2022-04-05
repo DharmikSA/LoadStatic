@@ -3,9 +3,6 @@ pipeline {
     stages {  
         stage ('Build') {  
                 steps {  
-                    
-                               try {
-
                     echo 'Running build phase...'
 
                     echo 'Running build phase2222...'  
@@ -30,10 +27,6 @@ pipeline {
                     '''
                        mail bcc: '', body: 'Yes WOrk', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
 
-                    
-  } catch (Exception err) {
-                       mail bcc: '', body: '$err', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
-            }
                 }
           
         } 
