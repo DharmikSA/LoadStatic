@@ -11,7 +11,7 @@ pipeline {
                 python3 manage.py runserver &
                 '''
 
-                sh '''
+                
                 ssh -t ubuntu@3.110.28.218 <<-EOF
                    apt install python3-django
                    if [ -d 'LoadStatic']
@@ -25,7 +25,7 @@ pipeline {
                    nohup python3 manage.py runserver 0:8000 &
                    EOF
 
-                '''
+        
             }  
         }  
     }  
