@@ -7,7 +7,7 @@ pipeline {
                 
                 echo 'Running build phase2222...'  
                 
-                try{
+                try {
                     sh '''
                 pwd
                 python3 manage.py runserver &
@@ -27,12 +27,11 @@ EOF
                 '''
                    mail bcc: '', body: 'Yes WOrk', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
 
-                }catch (Exception err) {
+                } catch (Exception err) {
                    mail bcc: '', body: '$err', cc: '', from: '', replyTo: '', subject: 'Manual Success', to: 'dharmiknakrani1690@gmail.com'
                 }
                 
             }
         } 
-      post 
     }  
 }  
