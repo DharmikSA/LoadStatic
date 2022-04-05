@@ -12,7 +12,7 @@ pipeline {
                 '''
 
                 sh '''
-                ssh -t ubuntu@3.110.32.130 <<-EOF
+                ssh -t ubuntu@3.110.28.218 <<-EOF
                    apt install python3-django
                    if [ -d 'LoadStatic']
                    then
